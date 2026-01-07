@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca0anx05wwsi6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufkn0"]
+radius = 128.996
+
+[node name="World_Object" type="Node2D"]
+
+[node name="Texture" type="Sprite2D" parent="."]
+
+[node name="Interact_Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_Area"]
+shape = SubResource("CircleShape2D_ufkn0")

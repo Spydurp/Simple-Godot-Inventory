@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7fa78ty2afa8"]
+
+[ext_resource type="PackedScene" uid="uid://bf6qy1ijlnrtc" path="res://Scenes/UI/generic_ui_component.tscn" id="1_3w02t"]
+[ext_resource type="Script" path="res://Scenes/UI/ui_inventory.gd" id="2_e5i48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtf1a"]
+
+[node name="UI_Inventory" instance=ExtResource("1_3w02t")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+script = ExtResource("2_e5i48")
+
+[node name="Section_Background" parent="MarginContainer" index="0"]
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="Section_Margin" parent="MarginContainer" index="1"]
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Section_Margin" index="0"]
+layout_mode = 2
+
+[node name="Label_Margin" type="MarginContainer" parent="MarginContainer/Section_Margin/VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Section_Margin/VBoxContainer/Label_Margin" index="0"]
+layout_mode = 2
+
+[node name="Grid_Margin" type="MarginContainer" parent="MarginContainer/Section_Margin/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin" index="0"]
+layout_mode = 2
+
+[node name="Dragged_Item_Container" type="PanelContainer" parent="." index="1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xtf1a")
+
+[node name="Dragged_Item" type="Sprite2D" parent="Dragged_Item_Container" index="0"]
+
+[node name="Dragged_Amount" type="Label" parent="Dragged_Item_Container" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "99"
+
+[connection signal="mouse_entered" from="MarginContainer" to="." method="_on_margin_container_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer" to="." method="_on_margin_container_mouse_exited"]

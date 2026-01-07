@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dl5dhh5xaarjb"]
+
+[ext_resource type="Script" path="res://Scenes/levels/testing/test_level.gd" id="1_m58e0"]
+[ext_resource type="PackedScene" uid="uid://d3uou788o5bbs" path="res://Scenes/UI/ui_player_inventory.tscn" id="1_yhm3p"]
+[ext_resource type="PackedScene" uid="uid://b41csjestot0n" path="res://Scenes/characters/mira.tscn" id="2_6jixj"]
+[ext_resource type="Texture2D" uid="uid://d1t3hupd34yym" path="res://icon.svg" id="4_rv8qr"]
+[ext_resource type="PackedScene" uid="uid://cf32xxj1svqkx" path="res://Scenes/objects/items/world_item.tscn" id="5_aegca"]
+[ext_resource type="Resource" uid="uid://dbbd8hvxodsqx" path="res://Scenes/objects/items/dev_stick/dev_stick.tres" id="6_cjunt"]
+[ext_resource type="PackedScene" uid="uid://dwuqvk7yxts20" path="res://Scenes/objects/chest.tscn" id="7_j2gll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmlsd"]
+
+[node name="Test_Level" type="Node2D"]
+script = ExtResource("1_m58e0")
+
+[node name="Mira" parent="." instance=ExtResource("2_6jixj")]
+
+[node name="Camera2D" type="Camera2D" parent="Mira"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(433, 230)
+texture = ExtResource("4_rv8qr")
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="dev_stick" parent="Items" instance=ExtResource("5_aegca")]
+position = Vector2(238, 144)
+item = ExtResource("6_cjunt")
+amount = 4
+
+[node name="Chest" parent="." instance=ExtResource("7_j2gll")]
+position = Vector2(128, 297)
+
+[node name="UI_elements" type="Node" parent="."]
+
+[node name="Inventory_Layer" type="CanvasLayer" parent="UI_elements"]
+
+[node name="UI_player_inventory" parent="UI_elements/Inventory_Layer" instance=ExtResource("1_yhm3p")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="Dragged_Item_Layer" type="CanvasLayer" parent="UI_elements"]
+follow_viewport_enabled = true
+
+[node name="Dragged_Item" type="PanelContainer" parent="UI_elements/Dragged_Item_Layer"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fmlsd")
+
+[node name="Dragged_Item_Texture" type="Sprite2D" parent="UI_elements/Dragged_Item_Layer/Dragged_Item"]
+
+[node name="Dragged_Item_Amount" type="Label" parent="UI_elements/Dragged_Item_Layer/Dragged_Item"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8

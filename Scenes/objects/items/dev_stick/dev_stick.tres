@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="invItem" load_steps=3 format=3 uid="uid://dbbd8hvxodsqx"]
+
+[ext_resource type="Script" path="res://Backend_Scripts/Inventory/inv_Item.gd" id="1_bq0vs"]
+[ext_resource type="Texture2D" uid="uid://c3rguvuv0scr" path="res://assets/items/Stick_JE1_BE1.png" id="2_2enhb"]
+
+[resource]
+script = ExtResource("1_bq0vs")
+name = "dev_stick"
+texture = ExtResource("2_2enhb")
+save_path = ""

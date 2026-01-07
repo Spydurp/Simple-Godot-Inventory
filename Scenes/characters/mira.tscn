@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b41csjestot0n"]
+
+[ext_resource type="Script" path="res://Scenes/characters/mira.gd" id="1_emmqv"]
+[ext_resource type="Texture2D" uid="uid://iqcjux88fo6g" path="res://assets/characters/miraiso.png" id="1_oeaia"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rh4j4"]
+radius = 7.0
+height = 28.0
+
+[node name="Mira" type="CharacterBody2D"]
+script = ExtResource("1_emmqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 26)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rh4j4")
+
+[node name="character_model" type="Sprite2D" parent="."]
+texture = ExtResource("1_oeaia")

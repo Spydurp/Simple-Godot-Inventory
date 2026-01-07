@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwuqvk7yxts20"]
+
+[ext_resource type="PackedScene" uid="uid://ca0anx05wwsi6" path="res://Scenes/objects/world_object.tscn" id="1_6u86x"]
+[ext_resource type="Script" path="res://Scenes/objects/chest.gd" id="2_0d65h"]
+[ext_resource type="Texture2D" uid="uid://cpo88ai8ik5p2" path="res://assets/objects/chest.bmp" id="2_omblk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kriy"]
+size = Vector2(64, 64)
+
+[node name="Chest" instance=ExtResource("1_6u86x")]
+script = ExtResource("2_0d65h")
+
+[node name="Texture" parent="." index="0"]
+texture = ExtResource("2_omblk")
+
+[node name="Collision_Box" type="StaticBody2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision_Box" index="0"]
+shape = SubResource("RectangleShape2D_5kriy")
+
+[connection signal="body_entered" from="Interact_Area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_Area" to="." method="_on_interact_area_body_exited"]

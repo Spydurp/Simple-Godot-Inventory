@@ -1,0 +1,3 @@
+extends ui_inventory
+
+class_name ui_container_inventory
