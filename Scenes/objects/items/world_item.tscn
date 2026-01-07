@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf32xxj1svqkx"]
+
+[ext_resource type="PackedScene" uid="uid://ca0anx05wwsi6" path="res://Scenes/objects/world_object.tscn" id="1_1s80e"]
+[ext_resource type="Script" path="res://Scenes/objects/items/world_item.gd" id="2_3t6r8"]
+
+[node name="World_Item" instance=ExtResource("1_1s80e")]
+script = ExtResource("2_3t6r8")
+
+[connection signal="body_entered" from="Interact_Area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_Area" to="." method="_on_interact_area_body_exited"]

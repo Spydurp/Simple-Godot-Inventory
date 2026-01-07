@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=3 uid="uid://batoqqlhxlky5"]
+
+[ext_resource type="PackedScene" uid="uid://b7fa78ty2afa8" path="res://Scenes/UI/ui_inventory.tscn" id="1_hhtwo"]
+[ext_resource type="Texture2D" uid="uid://dj3grk3e8v2g4" path="res://assets/UI/Menu_Background.bmp" id="2_1aeru"]
+[ext_resource type="Script" path="res://Scenes/UI/ui_container_inventory.gd" id="2_mr6bk"]
+[ext_resource type="PackedScene" uid="uid://b2bpuluvh07mu" path="res://Scenes/UI/inv_ui_slot.tscn" id="3_ynxx3"]
+
+[node name="UI_Container_Inventory" instance=ExtResource("1_hhtwo")]
+script = ExtResource("2_mr6bk")
+
+[node name="MarginContainer" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -277.5
+offset_right = 272.0
+offset_bottom = 277.5
+grow_vertical = 2
+
+[node name="Section_Background" parent="MarginContainer" index="0"]
+texture = ExtResource("2_1aeru")
+
+[node name="Label" parent="MarginContainer/Section_Margin/VBoxContainer/Label_Margin" index="0"]
+text = "Chest"
+
+[node name="GridContainer" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin" index="0"]
+columns = 4
+
+[node name="Inv_UI_Slot" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="0" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot2" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="1" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot3" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="2" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot4" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="3" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot5" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="4" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot6" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="5" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot7" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="6" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot8" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="7" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot9" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="8" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot10" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="9" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot11" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="10" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot12" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="11" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot13" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="12" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot14" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="13" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot15" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="14" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot16" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="15" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot17" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="16" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot18" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="17" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot19" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="18" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot20" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="19" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot21" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="20" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot22" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="21" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot23" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="22" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot24" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="23" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot25" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="24" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot26" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="25" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot27" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="26" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot28" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="27" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot29" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="28" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot30" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="29" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot31" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="30" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot32" parent="MarginContainer/Section_Margin/VBoxContainer/Grid_Margin/GridContainer" index="31" instance=ExtResource("3_ynxx3")]
+layout_mode = 2
